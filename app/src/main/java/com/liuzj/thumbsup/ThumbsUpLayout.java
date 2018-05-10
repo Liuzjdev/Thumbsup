@@ -104,6 +104,11 @@ public class ThumbsUpLayout extends RelativeLayout {
 
     }
 
+    /**
+     *  实现点赞效果 平移 缩放 渐变
+     * @param imageView
+     * @return 所有动画的集合
+     */
     private AnimatorSet getAnimator(final ImageView imageView) {
 
         //缩放
@@ -138,6 +143,11 @@ public class ThumbsUpLayout extends RelativeLayout {
         return set;
     }
 
+    /**
+     * 通过贝塞尔曲线对赞走向做控制
+     * @param imageView
+     * @return
+     */
     private ValueAnimator getBezierAnimator(final ImageView imageView) {
 
         //准备控制贝塞尔曲线的四个点（起始点p0,拐点p1,拐点p2,终点p3）
